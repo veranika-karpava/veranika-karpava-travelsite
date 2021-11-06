@@ -1,0 +1,54 @@
+@use "./mixins";
+@use "./variables";
+
+* {
+   margin: 0;
+   box-sizing: border-box; 
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+// for header
+.header {
+    @include mixins.flex(space-between, center, row);
+    padding: 1.2rem 6rem;
+    width: 100%;
+    background-color: variables.$white;
+    
+    &__name-logo {
+        font-size: 1.31rem;
+        font-weight: 700;
+        color: variables.$primary-text;
+    }
+ }
+
+ .header-nav {
+     width:30%;
+     &__link-list {
+        @include mixins.flex(space-evenly, center, row);
+    }
+     &__link{
+        color: variables.$black;
+        font-weight: 400;
+    }
+
+    &__link--active {
+        padding-bottom: .5rem;
+        border-bottom: .2rem solid variables.$jaffa;
+    }
+ }
+
+
+
+

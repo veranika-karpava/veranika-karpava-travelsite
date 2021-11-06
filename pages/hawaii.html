@@ -6,35 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawaii</title>
+    <link rel="stylesheet" href="../scss/destination.css">
 </head>
 
 <body>
-    <header></header>
+    <header class="header">
+        <a href="./index.html" class="header__link-logo">
+            <h1 class="header__name-logo">Travel Site</h1>
+        </a>
+        <nav class="header-nav">
+            <ul class="header-nav__link-list">
+                <li class="header-nav__item"><a href="index.html" class="header-nav__link">Home</a></li>
+                <li class="header-nav__item"><a href="./pages/hawaii.html"
+                        class="header-nav__link header-nav__link--active">Hawaii </a></li>
+                <li class="header-nav__item"><a href="./pages/iceland.html" class="header-nav__link">Iceland</a></li>
+                <li class="header-nav__item"><a href="./pages/greece.html" class="header-nav__link">Greece</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="hawaii-background-image">
             <section class="destination">
                 <h1 class="destination__title">Hawaii</h1>
-                <article class="destination__tour-package">
-                    <h2 class="destination__travel-day">Friday</h2>
-                    <p class="destination__included">Breakfast</p>
-                    <p class="destination__included">Lunch</p>
-                    <p class="destination__included">Dinner</p>
-                    <p class="destination__included">Snorkeling</p>
-                </article>
-                <article class="destination__tour-package">
-                    <h2 class="destination__travel-day">Saturday</h2>
-                    <p class="destination__included">Breakfast</p>
-                    <p class="destination__included">Lunch</p>
-                    <p class="destination__included">Dinner</p>
-                    <p class="destination__included">Snorkeling</p>
-                </article>
-                <article class="destination__tour-package">
-                    <h2 class="destination__travel-day">Sunday</h2>
-                    <p class="destination__included">Breakfast</p>
-                    <p class="destination__included">Lunch</p>
-                    <p class="destination__included">Dinner</p>
-                    <p class="destination__included">Snorkeling</p>
-                </article>
+                <div class="destination__tour-package">
+                    <article class="destination__details">
+                        <h2 class="destination__trip-day">Friday</h2>
+                        <p class="destination__activity">Breakfast</p>
+                        <p class="destination__activity">Lunch</p>
+                        <p class="destination__activity">Dinner</p>
+                        <p class="destination__activity">Snorkeling</p>
+                    </article>
+                    <article class="destination__details">
+                        <h2 class="destination__trip-day">Saturday</h2>
+                        <p class="destination__activity">Breakfast</p>
+                        <p class="destination__activity">Lunch</p>
+                        <p class="destination__activity">Dinner</p>
+                        <p class="destination__activity">Snorkeling</p>
+                    </article>
+                    <article class="destination__details">
+                        <h2 class="destination__trip-day">Sunday</h2>
+                        <p class="destination__activity">Breakfast</p>
+                        <p class="destination__activity">Lunch</p>
+                        <p class="destination__activity">Dinner</p>
+                        <p class="destination__activity">Snorkeling</p>
+                    </article>
+                </div>
             </section>
         </div>
     </main>

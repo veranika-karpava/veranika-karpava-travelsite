@@ -1,0 +1,41 @@
+@use "./partials/global";
+@use "./partials/variables";
+@use "./partials/mixins";
+
+
+.hawaii-background-image {
+    background-image: url(../../assets/images/hawaii.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.destination{
+    padding: 4rem 6rem;
+
+    &__title {
+        margin-bottom: 4rem;
+        font-size: 5rem;
+        font-weight: 700;
+        color: variables.$primary-bg;
+    }
+
+    &__tour-package {
+        @include mixins.flex(space-between, center, row);
+        
+    }
+
+    &__details {
+        background-color: variables.$primary-bg;
+        text-align: center;
+        width: 33%;
+        padding: 1rem;
+        margin-right: 2rem;
+    }
+
+
+
+}
+
+
+
