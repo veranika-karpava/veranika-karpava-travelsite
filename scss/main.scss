@@ -9,14 +9,69 @@
     
 
     &__content {
-        width:40%;
+        width:50%;
         @include mixins.flex(flex-start, flex-start, column, nowrap); 
+        color: variables.$primary-text;
+    }
+
+    &__title-content {
+        font-size: 2.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__message-content {
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+    }
+
+    &__btn-content {
+        color: variables.$white;
+        background-color: variables.$jaffa;
+        padding: .8rem 3rem;
+        border-radius: 25px;
     }
 
     &__image {
         width: 40%;
-
     }
+}
+
+.recommendation {
+    padding: 2rem 6rem 3rem;
+    
+    &__title {
+        color: variables.$primary-text;
+        margin-bottom: 2rem;
+    }
+
+    &__container{
+        @include mixins.flex(center, center, row, wrap);
+    }
+
+    &__card {
+        width: 20%;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin-right: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__name-card{
+        color: variables.$white;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    &__image-card {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+
+
 }
 
 
