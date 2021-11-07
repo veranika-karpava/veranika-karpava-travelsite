@@ -21,25 +21,32 @@ ul {
 
 // for header
 .header {
-    @include mixins.flex(space-between, center, row);
+    @include mixins.flex(space-between, center, row, wrap);
     padding: 1.2rem 6rem;
     width: 100%;
     background-color: variables.$white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     
     &__name-logo {
-        font-size: 1.31rem;
+        font-size: 1.20rem;
         font-weight: 700;
         color: variables.$primary-text;
     }
- }
+}
 
  .header-nav {
-     width:30%;
+     width:35%;
+
      &__link-list {
-        @include mixins.flex(space-evenly, center, row);
+        @include mixins.flex(space-evenly, center, row, wrap);
+        flex-wrap: wrap;
     }
+
      &__link{
         color: variables.$black;
+        font-size: 1rem;
         font-weight: 400;
     }
 
@@ -47,7 +54,66 @@ ul {
         padding-bottom: .5rem;
         border-bottom: .2rem solid variables.$jaffa;
     }
- }
+}
+
+//  for footer
+.footer {
+    background-color: variables.$primary-bg;
+    color: variables.$primary-text;
+    padding: 3rem 6rem 3rem 6rem;
+    @include mixins.flex(space-evenly, flex-start, row, nowrap); 
+
+    &__contact,
+    &__schedule,
+    &__social-media {
+        @include mixins.flex(center, flex-start, column, wrap);
+    }
+
+    &__contact {
+        margin-left: 5.8rem;  
+    }
+
+    &__social-media{
+        margin-right: 4rem;     
+    }
+
+    &__options {
+    @include mixins.flex(flex-start, flex-start, row, wrap); 
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        font-size: 1.31rem;
+        font-weight: 700;
+    }
+
+    &__option {
+        font-size: .6rem;
+        font-weight: 400;
+        color: variables.$jaffa;
+        margin-bottom: .5rem;
+    }
+
+    &__working-day,
+    &__weekend-saturday,
+    &__weekend-sunday {
+        margin-right: 2rem;
+    }
+
+    &__link,
+    &__hours {
+        font-size: .8rem;
+        color: variables.$primary-text; 
+    }
+
+    &__img-social {
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        margin-right: 1.8rem;
+        margin-top: .8rem;
+    }
+}
+
 
 
 

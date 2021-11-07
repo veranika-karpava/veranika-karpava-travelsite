@@ -21,30 +21,113 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1.2rem 6rem;
   width: 100%;
   background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .header__name-logo {
-  font-size: 1.31rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #335576;
 }
 
 .header-nav {
-  width: 30%;
+  width: 35%;
 }
 .header-nav__link-list {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .header-nav__link {
   color: #000000;
+  font-size: 1rem;
   font-weight: 400;
 }
 .header-nav__link--active {
   padding-bottom: 0.5rem;
   border-bottom: 0.2rem solid #DB7A4E;
+}
+
+.footer {
+  background-color: #FEFAF5;
+  color: #335576;
+  padding: 3rem 6rem 3rem 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.footer__contact, .footer__schedule, .footer__social-media {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer__contact {
+  margin-left: 5.8rem;
+}
+.footer__social-media {
+  margin-right: 4rem;
+}
+.footer__options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer__title {
+  margin-bottom: 2rem;
+  font-size: 1.31rem;
+  font-weight: 700;
+}
+.footer__option {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #DB7A4E;
+  margin-bottom: 0.5rem;
+}
+.footer__working-day, .footer__weekend-saturday, .footer__weekend-sunday {
+  margin-right: 2rem;
+}
+.footer__link, .footer__hours {
+  font-size: 0.8rem;
+  color: #335576;
+}
+.footer__img-social {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  margin-right: 1.8rem;
+  margin-top: 0.8rem;
+}
+
+.hero {
+  padding: 7rem 6rem 6rem;
+  background-color: #FEFAF5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hero__content {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.hero__image {
+  width: 40%;
 }/*# sourceMappingURL=main.css.map */

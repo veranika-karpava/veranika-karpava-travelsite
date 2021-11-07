@@ -4,14 +4,22 @@
 
 
 .hawaii-background-image {
-    background-image: url(../../assets/images/hawaii.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url(../assets/images/hawaii.jpg);
+    @include mixins.bg-stack(no-repeat, 100% auto, center);
+}
+
+.iceland-background-image {
+    background-image: url(../assets/images/iceland.jpg);
+    @include mixins.bg-stack(no-repeat, 100% auto, center);
+}
+
+.greece-background-image {
+    background-image: url(../assets/images/greece.jpg);
+    @include mixins.bg-stack(no-repeat, 100% auto, center);
 }
 
 .destination{
-    padding: 4rem 6rem;
+    padding: 7rem 6rem 6rem;
 
     &__title {
         margin-bottom: 4rem;
@@ -21,20 +29,30 @@
     }
 
     &__tour-package {
-        @include mixins.flex(space-between, center, row);
-        
+    @include mixins.flex(center, center, row, wrap);
     }
 
     &__details {
-        background-color: variables.$primary-bg;
+        background-color: variables.$white;
         text-align: center;
-        width: 33%;
-        padding: 1rem;
-        margin-right: 2rem;
+        min-width: 20%;
+        padding: 1rem 1rem 3rem;
+        margin: 0 2rem 2rem 0;
+        border-radius: 5px;
+        overflow: hidden;
     }
 
+    &__trip-day {
+        font-size: 1rem;
+        border-bottom:  2px solid variables.$black;
+        margin-bottom: 1.5rem;
+    }
 
-
+    &__activity {
+        background-color: variables.$primary-bg;
+        padding: .5rem 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 

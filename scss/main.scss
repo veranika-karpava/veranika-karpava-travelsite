@@ -2,4 +2,21 @@
 @use "./partials/variables";
 @use "./partials/mixins";
 
+.hero {
+    padding: 7rem 6rem 6rem;
+    background-color: variables.$primary-bg;
+    @include mixins.flex(space-between, center, row, wrap);
+    
+
+    &__content {
+        width:40%;
+        @include mixins.flex(flex-start, flex-start, column, nowrap); 
+    }
+
+    &__image {
+        width: 40%;
+
+    }
+}
+
 
