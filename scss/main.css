@@ -43,13 +43,20 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+.header-nav__item {
+  margin-right: 1rem;
 }
 .header-nav__link {
   color: #000000;
   font-size: 1rem;
   font-weight: 400;
+}
+.header-nav__link:hover {
+  color: #335576;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid #DB7A4E;
 }
 .header-nav__link--active {
   padding-bottom: 0.5rem;
@@ -68,13 +75,14 @@ ul {
 }
 .footer__contact, .footer__schedule, .footer__social-media {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .footer__contact {
   margin-left: 5.8rem;
+  margin-right: 1rem;
 }
 .footer__social-media {
   margin-right: 4rem;
@@ -82,9 +90,9 @@ ul {
 .footer__options {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .footer__title {
   margin-bottom: 2rem;
@@ -142,6 +150,11 @@ ul {
   background-color: #DB7A4E;
   padding: 0.8rem 3rem;
   border-radius: 25px;
+  transition-duration: 1s;
+}
+.hero__btn-content:hover {
+  color: #335576;
+  transform: scale(1.1);
 }
 .hero__image {
   width: 40%;
@@ -166,9 +179,14 @@ ul {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   position: relative;
-  margin-right: 2.5rem;
-  margin-bottom: 2rem;
+  margin: 0 2.5rem 2rem 0;
+  transition-duration: 1s;
+}
+.recommendation__card:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 10px 10px rgba(51, 85, 118, 0.5);
 }
 .recommendation__name-card {
   color: #FFFFFF;

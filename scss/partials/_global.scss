@@ -40,8 +40,11 @@ ul {
      width:35%;
 
      &__link-list {
-        @include mixins.flex(space-evenly, center, row, wrap);
-        flex-wrap: wrap;
+        @include mixins.flex(space-evenly, center, row, nowrap);
+    }
+
+    &__item {
+        margin-right: 1rem;
     }
 
      &__link{
@@ -49,6 +52,12 @@ ul {
         font-size: 1rem;
         font-weight: 400;
     }
+
+    &__link:hover{
+        color: variables.$primary-text;
+        padding-bottom: .5rem;
+        border-bottom: .2rem solid variables.$jaffa;
+    }  
 
     &__link--active {
         padding-bottom: .5rem;
@@ -66,11 +75,12 @@ ul {
     &__contact,
     &__schedule,
     &__social-media {
-        @include mixins.flex(center, flex-start, column, wrap);
+        @include mixins.flex(flex-start, flex-start, column, wrap);
     }
 
     &__contact {
-        margin-left: 5.8rem;  
+        margin-left: 5.8rem; 
+        margin-right: 1rem; 
     }
 
     &__social-media{
@@ -78,7 +88,7 @@ ul {
     }
 
     &__options {
-    @include mixins.flex(flex-start, flex-start, row, wrap); 
+    @include mixins.flex(); 
     }
 
     &__title {

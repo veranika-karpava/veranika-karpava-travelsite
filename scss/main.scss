@@ -29,6 +29,12 @@
         background-color: variables.$jaffa;
         padding: .8rem 3rem;
         border-radius: 25px;
+        transition-duration: 1s;
+    }
+
+    &__btn-content:hover {
+        color: variables.$primary-text;
+        transform: scale(1.1);
     }
 
     &__image {
@@ -53,9 +59,15 @@
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
         position: relative;
-        margin-right: 2.5rem;
-        margin-bottom: 2rem;
+        margin: 0 2.5rem 2rem 0;
+        transition-duration: 1s;
+    }
+
+    &__card:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 10px 10px rgba(51, 85, 118, 0.5);
     }
 
     &__name-card{
@@ -69,9 +81,6 @@
         max-width: 100%;
         vertical-align: middle;
     }
-
-
-
 }
 
 
