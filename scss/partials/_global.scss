@@ -132,7 +132,7 @@ ul {
     @include mixins.flex(); 
     @include mixins.phone {
         @include mixins.flex(flex-start, flex-start, column, nowrap);
-    }
+        }
     }
 
     &__title {
