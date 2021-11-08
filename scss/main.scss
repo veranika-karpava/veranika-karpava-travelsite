@@ -6,22 +6,45 @@
     padding: 7rem 6rem 6rem;
     background-color: variables.$primary-bg;
     @include mixins.flex(space-between, center, row, wrap);
+    @include mixins.tablet {
+        padding: 7rem 3rem 2rem;
+        @include mixins.flex(space-between, center, column-reverse, wrap);
+        }
+        @include mixins.phone {
+            padding: 8rem 3rem 2rem;
+            }
     
 
     &__content {
         width:50%;
         @include mixins.flex(flex-start, flex-start, column, nowrap); 
         color: variables.$primary-text;
-    }
+        @include mixins.tablet {
+            width:100%;
+            text-align: center;
+            }
+        }
 
     &__title-content {
         font-size: 2.25rem;
         margin-bottom: 2.5rem;
+        @include mixins.tablet {
+            margin-bottom: 2vw;  
+        }
+        @include mixins.phone {
+            font-size: 1.5rem;
+            }
     }
 
     &__message-content {
         margin-bottom: 2.5rem;
         line-height: 1.5;
+        @include mixins.tablet {
+            margin-bottom: 3vw;  
+        }
+        @include mixins.phone {
+            font-size: .8rem;
+        }
     }
 
     &__btn-content {
@@ -30,28 +53,53 @@
         padding: .8rem 3rem;
         border-radius: 25px;
         transition-duration: 1s;
+        @include mixins.tablet {
+            margin: auto;
+        }
     }
 
     &__btn-content:hover {
         color: variables.$primary-text;
         transform: scale(1.1);
+        @include mixins.tablet {
+            transform: scale(1.0);
+        }
+        @include mixins.phone {
+            color: variables.$white;
+        }
     }
 
     &__image {
         width: 40%;
+        @include mixins.tablet {
+            width:60%;
+            margin-bottom: 2vw;
+        }
     }
 }
 
 .recommendation {
     padding: 2rem 6rem 3rem;
+    @include mixins.tablet {
+        padding: 2rem 3rem 2rem;  
+    }
     
     &__title {
         color: variables.$primary-text;
         margin-bottom: 2rem;
+        @include mixins.tablet {
+            text-align: center;
+        }
     }
 
     &__container{
         @include mixins.flex(center, center, row, wrap);
+        @include mixins.tablet {
+            @include mixins.flex(space-evenly, center, row, nowrap);
+        }
+        @include mixins.phone {
+            @include mixins.flex(flex-start, center, column, nowrap);
+        }
     }
 
     &__card {
@@ -63,11 +111,24 @@
         position: relative;
         margin: 0 2.5rem 2rem 0;
         transition-duration: 1s;
+        @include mixins.tablet {
+            width: 30%;  
+            margin: 0;
+            
+        }
+        @include mixins.phone {
+            width: 90%; 
+            margin-bottom: 3vw;
+        }
     }
 
     &__card:hover {
         transform: scale(1.2);
         box-shadow: 0px 10px 10px rgba(51, 85, 118, 0.5);
+        @include mixins.tablet {
+            transform: scale(1.0);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        }
     }
 
     &__name-card{
@@ -75,6 +136,9 @@
         position: absolute;
         right: 5%;
         bottom: 5%;
+        @include mixins.phone {
+            font-size: 2.5rem;
+        }
     }
 
     &__image-card {

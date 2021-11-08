@@ -29,14 +29,43 @@ ul {
   top: 0;
   z-index: 1;
 }
+@media screen and (max-width: 48rem) {
+  .header {
+    padding: 1.2rem 3rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 .header__name-logo {
   font-size: 1.2rem;
   font-weight: 700;
   color: #335576;
 }
+@media screen and (max-width: 30rem) {
+  .header__name-logo {
+    margin-bottom: 3vw;
+  }
+}
 
 .header-nav {
   width: 35%;
+}
+@media screen and (max-width: 48rem) {
+  .header-nav {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .header-nav {
+    width: 100%;
+  }
 }
 .header-nav__link-list {
   display: flex;
@@ -48,6 +77,11 @@ ul {
 .header-nav__item {
   margin-right: 1rem;
 }
+@media screen and (max-width: 48rem) {
+  .header-nav__item {
+    margin-right: 4vw;
+  }
+}
 .header-nav__link {
   color: #000000;
   font-size: 1rem;
@@ -57,6 +91,13 @@ ul {
   color: #335576;
   padding-bottom: 0.5rem;
   border-bottom: 0.2rem solid #DB7A4E;
+}
+@media screen and (max-width: 48rem) {
+  .header-nav__link:hover {
+    color: #000000;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 }
 .header-nav__link--active {
   padding-bottom: 0.5rem;
@@ -73,19 +114,50 @@ ul {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+@media screen and (max-width: 48rem) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 3rem 3rem 1rem 3rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer {
+    padding: 3rem 3rem 3rem 3rem;
+  }
+}
 .footer__contact, .footer__schedule, .footer__social-media {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 48rem) {
+  .footer__contact, .footer__schedule, .footer__social-media {
+    margin-bottom: 3vw;
+  }
 }
 .footer__contact {
   margin-left: 5.8rem;
   margin-right: 1rem;
 }
+@media screen and (max-width: 48rem) {
+  .footer__contact {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .footer__social-media {
   margin-right: 4rem;
+}
+@media screen and (max-width: 48rem) {
+  .footer__social-media {
+    margin-right: 0;
+  }
 }
 .footer__options {
   display: flex;
@@ -94,16 +166,40 @@ ul {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+@media screen and (max-width: 30rem) {
+  .footer__options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
 .footer__title {
   margin-bottom: 2rem;
   font-size: 1.31rem;
   font-weight: 700;
+}
+@media screen and (max-width: 48rem) {
+  .footer__title {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .footer__title {
+    margin-bottom: 0.5rem;
+  }
 }
 .footer__option {
   font-size: 0.6rem;
   font-weight: 400;
   color: #DB7A4E;
   margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 30rem) {
+  .footer__option {
+    margin-top: 0.5rem;
+  }
 }
 .footer__working-day, .footer__weekend-saturday, .footer__weekend-sunday {
   margin-right: 2rem;
@@ -118,12 +214,24 @@ ul {
   margin-right: 1.8rem;
   margin-top: 0.8rem;
 }
+@media screen and (max-width: 48rem) {
+  .footer__img-social {
+    margin-top: 0;
+  }
+}
 
 .hawaii-background-image {
   background-image: url(../assets/images/hawaii.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+}
+@media screen and (max-width: 30rem) {
+  .hawaii-background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .iceland-background-image {
@@ -132,6 +240,13 @@ ul {
   background-size: 100% auto;
   background-position: center;
 }
+@media screen and (max-width: 30rem) {
+  .iceland-background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 .greece-background-image {
   background-image: url(../assets/images/greece.jpg);
@@ -139,9 +254,26 @@ ul {
   background-size: 100% auto;
   background-position: center;
 }
+@media screen and (max-width: 30rem) {
+  .greece-background-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 .destination {
-  padding: 7rem 6rem 6rem;
+  padding: 9rem 6rem 6rem;
+}
+@media screen and (max-width: 48rem) {
+  .destination {
+    padding: 7rem 3rem 3rem;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .destination {
+    padding: 7rem 2rem 2rem;
+  }
 }
 .destination__title {
   margin-bottom: 4rem;
@@ -149,12 +281,41 @@ ul {
   font-weight: 700;
   color: #FEFAF5;
 }
+@media screen and (max-width: 48rem) {
+  .destination__title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .destination__title {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
 .destination__tour-package {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 48rem) {
+  .destination__tour-package {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .destination__tour-package {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 .destination__details {
   background-color: #FFFFFF;
@@ -165,10 +326,27 @@ ul {
   border-radius: 5px;
   overflow: hidden;
 }
+@media screen and (max-width: 48rem) {
+  .destination__details {
+    min-width: 30%;
+    margin: 1vh;
+  }
+}
+@media screen and (max-width: 30rem) {
+  .destination__details {
+    width: 90%;
+    padding: 1rem 1rem 1rem;
+  }
+}
 .destination__trip-day {
   font-size: 1rem;
   border-bottom: 2px solid #000000;
   margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 30rem) {
+  .destination__trip-day {
+    margin-bottom: 1rem;
+  }
 }
 .destination__activity {
   background-color: #FEFAF5;

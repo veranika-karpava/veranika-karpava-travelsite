@@ -1,3 +1,5 @@
+@use "./variables";
+
 @mixin flex($justify-content: flex-start, $align-items: stretch, $flex-direction: row, $flex-wrap: nowrap){
     display:flex;
     justify-content: $justify-content;
@@ -10,4 +12,16 @@
     background-repeat: $background-repeat;
     background-size:  $background-size;
     background-position: $background-position;
-}           
+}    
+
+@mixin tablet {
+    @media screen and (max-width: variables.$tablet-breakpoint) {
+    @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: variables.$phone-breakpoint) {
+    @content;
+    }
+}

@@ -28,16 +28,31 @@ ul {
     position: fixed;
     top: 0;
     z-index: 1;
-    
+    @include mixins.tablet {
+        padding: 1.2rem 3rem;
+    }
+    @include mixins.phone {
+        @include mixins.flex(flex-start, center, column, wrap);
+    }
+
     &__name-logo {
         font-size: 1.20rem;
         font-weight: 700;
         color: variables.$primary-text;
+        @include mixins.phone {
+           margin-bottom: 3vw;
+        }
     }
 }
 
  .header-nav {
      width:35%;
+     @include mixins.tablet {
+        width:50%;
+    }
+    @include mixins.phone {
+        width:100%;
+    }
 
      &__link-list {
         @include mixins.flex(space-evenly, center, row, nowrap);
@@ -45,6 +60,9 @@ ul {
 
     &__item {
         margin-right: 1rem;
+        @include mixins.tablet {
+            margin-right: 4vw;
+        }
     }
 
      &__link{
@@ -57,6 +75,11 @@ ul {
         color: variables.$primary-text;
         padding-bottom: .5rem;
         border-bottom: .2rem solid variables.$jaffa;
+        @include mixins.tablet {
+        color: variables.$black;
+        padding-bottom: 0;
+        border-bottom: 0;
+        }
     }  
 
     &__link--active {
@@ -71,30 +94,57 @@ ul {
     color: variables.$primary-text;
     padding: 3rem 6rem 3rem 6rem;
     @include mixins.flex(space-evenly, flex-start, row, nowrap); 
+    @include mixins.tablet {
+        @include mixins.flex(space-between, flex-start, column, nowrap);
+        padding: 3rem 3rem 1rem 3rem;
+    }
+    @include mixins.phone {
+        padding: 3rem 3rem 3rem 3rem;
+    }
 
     &__contact,
     &__schedule,
     &__social-media {
-        @include mixins.flex(flex-start, flex-start, column, wrap);
+        @include mixins.flex(flex-start, flex-start, column, nowrap);
+        @include mixins.tablet {
+            margin-bottom: 3vw; 
+        }
+   
     }
 
     &__contact {
         margin-left: 5.8rem; 
         margin-right: 1rem; 
+        @include mixins.tablet {
+            margin-left: 0; 
+            margin-right: 0; 
+        }
     }
 
     &__social-media{
-        margin-right: 4rem;     
+        margin-right: 4rem;
+        @include mixins.tablet {
+            margin-right: 0; 
+        }     
     }
 
     &__options {
     @include mixins.flex(); 
+    @include mixins.phone {
+        @include mixins.flex(flex-start, flex-start, column, nowrap);
+    }
     }
 
     &__title {
         margin-bottom: 2rem;
         font-size: 1.31rem;
         font-weight: 700;
+        @include mixins.tablet {
+            margin-bottom: 1rem; 
+        }
+        @include mixins.phone {
+            margin-bottom: .5rem; 
+        }
     }
 
     &__option {
@@ -102,6 +152,9 @@ ul {
         font-weight: 400;
         color: variables.$jaffa;
         margin-bottom: .5rem;
+        @include mixins.phone {
+            margin-top: .5rem;
+        }
     }
 
     &__working-day,
@@ -121,8 +174,12 @@ ul {
         max-height: 1.5rem;
         margin-right: 1.8rem;
         margin-top: .8rem;
+        @include mixins.tablet {
+            margin-top: 0;
+        }
     }
 }
+
 
 
 
